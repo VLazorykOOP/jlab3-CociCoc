@@ -2,54 +2,29 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-
         Scanner scan = new Scanner(System.in);
 
-        System.out.print("Input countryName: ");
-        String countryName = scan.next();
-        System.out.print("Input populationCountry: ");
-        int populationCountry = scan.nextInt();
+        Integer integer = new Integer();
+        Real real = new Real();
 
-        System.out.print("Input nameKingdom: ");
-        String nameKingdom = scan.next();
-        System.out.print("Input populationKingdom: ");
-        int populationKingdom = scan.nextInt();
-        System.out.print("Input monarchKingdom: ");
-        String monarchKingdom = scan.next();
+        System.out.println("Input a and b:");
+        double a = scan.nextDouble();
+        double b = scan.nextDouble();
 
-        System.out.print("Input nameRepublic: ");
-        String nameRepublic = scan.next();
-        System.out.print("Input populationRepublic: ");
-        int populationRepublic = scan.nextInt();
-        System.out.print("Input monarchRepublic: ");
-        String monarchRepublic = scan.next();
-        System.out.print("Input presidedRepublic: ");
-        String presidedRepublic = scan.next();
+        integer.add((int)a, (int)b);
+        real.multiplication(a, b);
 
-        System.out.print("Input nameMonarchy: ");
-        String nameMonarchy = scan.next();
-        System.out.print("Input populationMonarchy: ");
-        int populationMonarchy = scan.nextInt();
-        System.out.print("Input monarchMonarchy: ");
-        String monarchMonarchy = scan.next();
-        System.out.print("Input presidedMonarchy: ");
-        String presidedMonarchy = scan.next();
-        // Створення держави
-        Country ukraine = new Country(countryName, populationCountry);
+        System.out.println("\n");
 
-        // Створення королівства
-        Kingdom unitedKingdom = new Kingdom(nameKingdom, populationKingdom, monarchKingdom);
+        System.out.println("Input a and b:");
+        double a1 = scan.nextDouble();
+        double b1 = scan.nextDouble();
 
-        // Створення республіки
-        Republic france = new Republic(nameRepublic, populationRepublic, monarchRepublic, presidedRepublic);
+        IntegerInter integer1 = new IntegerInter();
+        RealInter real1 = new RealInter();
 
-        // Створення монархії
-        Monarchy japan = new Monarchy(nameMonarchy, populationMonarchy, monarchMonarchy, presidedMonarchy);
+        integer1.division((int)a1, (int)b1);
+        real1.minus(a1, b1);
 
-        System.out.println(ukraine);
-        System.out.println(unitedKingdom);
-        System.out.println(france);
-        System.out.println(japan);
     }
-
 }
